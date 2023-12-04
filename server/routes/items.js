@@ -1,26 +1,29 @@
 const express = require("express");
-const router = express.Router();
-const { Item } = require("../models/Item");
+const itemRouter = express.Router();
+const { Item } = require("../models/Item.js");
+
+itemRouter.use(express.json())
+itemRouter.use(express.urlencoded())
 
 // GET /items
-router.get("/", async (req, res, next) => {
+itemRouter.get("/", async (req, res, next) => {
   try {
     const items = await Item.findAll();
-    res.send(items);
+    res.json(items);
   } catch (error) {
     next(error);
   }
 });
 
 // Get /:id
-router.get('/:id', async (req, res, next) => {
+itemRouter.get('/:id', async (req, res, next) => {
     try {
       const item = await Item.findByPk(req.params.id)
       if (!item) return res.sendStatus(404)
-      res.send(item)
+      res.json(item)
     } catch (err) {
       next(err);
     }
   })
 
-module.exports = router;
+module.exports = itemRouter;
