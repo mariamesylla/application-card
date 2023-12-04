@@ -1,9 +1,10 @@
 const express = require("express");
-const router = express.Router();
+const app = express()
 const itemRouter = require('./items.js')
+const saucesRouter = require('./sauces.js')
 
 // different model routers
-router.use('/sauces', require('./sauces'));
-router.use('/items', itemRouter);
+app.use('/sauces',saucesRouter);
+app.use('/items', itemRouter);
 
-module.exports = router;
+module.exports = app;

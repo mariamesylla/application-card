@@ -2,8 +2,6 @@ const express = require("express");
 const itemRouter = express.Router();
 const { Item } = require("../models/Item.js");
 
-itemRouter.use(express.json())
-itemRouter.use(express.urlencoded())
 
 // GET /items
 itemRouter.get("/", async (req, res, next) => {

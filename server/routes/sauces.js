@@ -1,9 +1,9 @@
 const express = require("express");
-const router = express.Router();
-const { Sauce } = require("../models");
+const saucesRouter = express.Router();
+const { Sauce } = require("../models/index");
 
 // GET /sauce
-router.get("/", async (req, res, next) => {
+saucesRouter.get("/", async (req, res, next) => {
   try {
     const sauces = await Sauce.findAll();
     res.send(sauces);
@@ -12,4 +12,4 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-module.exports = router;
+module.exports = saucesRouter;
