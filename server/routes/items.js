@@ -15,14 +15,14 @@ itemRouter.get("/", async (req, res, next) => {
 
 // Get /:id
 itemRouter.get('/:id', async (req, res, next) => {
-    try {
-      const item = await Item.findByPk(req.params.id)
-      if (!item) return res.sendStatus(404)
-      res.json(item)
-    } catch (err) {
-      next(err);
-    }
-  })
+  try {
+    const item = await Item.findByPk(req.params.id)
+    if (!item) return res.sendStatus(404)
+    res.json(item)
+  } catch (err) {
+    next(err);
+  }
+})
 
 // Post /items 
 itemRouter.post('/', async (req, res, next) => {
@@ -64,6 +64,20 @@ itemRouter.put("/:id", async (req, res, next) => {
   }
 });
 
+// Update /:id
+itemRouter.put('/:id', async (req, res, next) => {
+  try {
+    let item = await Item.findByPk(req.params.id)
+    if (!item) return res.sendStatus(404)
+    item = await item.update({ ...item, ...req.body })
+    res.send(item)
+  } catch (err) {
+    res.sendStatus(500)
+    next(err);
+  }
+})
+
+//Delete /:id
 itemRouter.delete('/:id', async (req, res, next) => {
   try {
     let item = await Item.findByPk(req.params.id)
