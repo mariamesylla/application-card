@@ -34,6 +34,35 @@ itemRouter.post('/', async (req, res, next) => {
     next(err);
   }
 })
+// Update item
+// itemRouter.put("/:id", async (req, res, next) => {
+//   try {
+//     let item = await Item.findByPk(req.params.id)
+//     if (!item) return res.sendStatus(404)
+//     item= await item.update(req.body)
+//     await item.save()
+//     res.send(item)
+//   } catch (err) {
+//     //res.sendStatus(500)
+//     next(err);
+//   }
+// });
+
+// Update item second
+
+itemRouter.put("/:id", async (req, res, next) => {
+  try {
+   const item = await Item.update(req.body, {
+      where: { id: req.params.id },
+    });
+    res.json(item)
+    //res.send(item)
+    res.sendStatus(200);
+  } 
+  catch (error) {
+    next(error);
+  }
+});
 
 itemRouter.delete('/:id', async (req, res, next) => {
   try {
