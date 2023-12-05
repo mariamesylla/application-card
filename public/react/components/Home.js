@@ -12,6 +12,8 @@ export const Home = () => {
             <Link to='/items'>Go to Items Available</Link>
             <hr />
             <Link to='/sauces'>Go to Sauces Available</Link>
+            <hr />
+            <Link to='/createItem'>Add items</Link>
         </div>
     </div>
   )
