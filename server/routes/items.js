@@ -24,4 +24,26 @@ itemRouter.get('/:id', async (req, res, next) => {
     }
   })
 
+// Post /items 
+itemRouter.post('/', async (req, res, next) => {
+  try {
+    const item = await Item.create(req.body)
+    res.json(item)
+  } catch (err) {
+    res.sendStatus(500)
+    next(err);
+  }
+})
+
+itemRouter.delete('/:id', async (req, res, next) => {
+  try {
+    let item = await Item.findByPk(req.params.id)
+    if (!item) return res.sendStatus(404)
+    item = await item.destroy()
+    res.send(item)
+  } catch (err) {
+    res.sendStatus(500)
+    next(err);
+  }
+})
 module.exports = itemRouter;
