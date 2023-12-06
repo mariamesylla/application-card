@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate, redirect } from "react-router-dom";
+import { useParams, useNavigate, Link} from "react-router-dom";
 import apiURL from "../api";
-import { Link } from "react-router-dom";
 import { UpdateItem } from "./UpdateItem";
 import { SameCategory } from "./SameCategory";
 
