@@ -37,23 +37,7 @@ export const Items = () => {
   useEffect(() => {
     filterItems()
   }, [query])
-
-  const DeleteItem = async (itemId) => {
-    try {
-      const res = await fetch(`${'../api'}/items/${id}`, {
-        method: 'DELETE',
-      });
-      if (res.ok) {
-
-        setItems(items.filter((item) => item.id !== id));
-        console.log('Item deleted !');
-      } else {
-        console.log('Unable to delete item');
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  
 
   return (
     <div className='bg-white'>
@@ -88,11 +72,6 @@ export const Items = () => {
                 <p className='text-sm font-medium text-gray-900'>${item.price}</p>
               </div>
 
-              <button
-                onClick={() => DeleteItem(item.id)}
-                className='mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-red-600'>
-                Delete
-              </button>
             </div>
 				))}
         </div>
