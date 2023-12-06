@@ -32,15 +32,13 @@ export const ItemContainer = () => {
     }
 
 
-    const DeleteItem = async (Id) => {
+    const DeleteItem = async (id) => {
         try {
-          const res = await fetch(`${apiURL}/items/${Id}`, {
+          const res = await fetch(`${apiURL}/items/${id}`, {
             method: 'DELETE',
           });
-            setItem(item.filter((item) => item.id !== Id));
-            console.log('Item deleted !');
-        
-            //console.log('Unable to delete item');
+            setItem(item.filter((item) => item.id !== id));
+            console.log('Item deleted !')
         } catch (error) {
           console.log(error);
         }
@@ -67,9 +65,9 @@ export const ItemContainer = () => {
 
                 <button
                 onClick={handleClick}
-                className='mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-red-600'>
-                
-                Delete
+                className='mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-red-600'
+                >
+                    Delete
                 </button>
         </div>
         </div>
