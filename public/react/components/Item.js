@@ -3,6 +3,7 @@ import { useParams, useNavigate} from 'react-router-dom'
 import apiURL from '../api';
 import { Link } from 'react-router-dom'
 import { UpdateItem } from './UpdateItem'
+import { SameCategory } from './SameCategory';
 
 
 
@@ -77,6 +78,9 @@ export const ItemContainer = () => {
             {/* Show more the same */}
             <div className='mt-20 px-4 py-16'>
                 <div className='text-center'>More the same</div>
+                <div>
+                    <SameCategory categoryCheck={item.category}/>
+                </div>
             </div>
         </div>
 
