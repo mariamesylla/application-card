@@ -7,7 +7,7 @@ export const Navbar = () => {
     return (
       <nav className="flex items-center justify-between flex-wrap p-10">
         <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72">
-          <Link to='/'><p className="text-blue-500 font-bold text-2xl">Team Blue</p></Link>
+          <Link to='/'><h1 className="w-full text-3xl font-medium text-blue-500">Team Blue.</h1></Link>
         </div>
         <div className="block lg:hidden">
           <button
@@ -30,13 +30,16 @@ export const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto ${isOpen ? "block" : "hidden"}`}>
-          <div className="text-sm">
-            <a href="/items" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 hover:text-blue-400 duration-500">
+       <div className={`w-[80%] block flex-grow lg:flex lg:items-center lg:w-auto ease-in-out duration-500 ${isOpen ? "block" : "hidden"}`} >
+          <div className="text-sm lg:flex-grow text-left lg:text-right">
+            <a href="/items" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4  hover:text-black duration-500">
               Items
             </a>
-            <a href="/sauces" className="block mt-4 lg:inline-block lg:mt-0 text-black-200 mr-4 hover:text-blue-400 duration-500">
+            <a href="/sauces" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4 hover:text-black duration-500">
               Sauces
+            </a>
+            <a href="/items" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4 hover:text-black duration-500">
+              Add Item
             </a>
           </div>
         </div>

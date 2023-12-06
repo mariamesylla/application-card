@@ -43,13 +43,12 @@ export const Items = () => {
       <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-full lg:px-20'>
         <h2 className='text-2xl font-bold tracking-tight text-blue-500 mb-10 ml-5'>Items Available</h2>
 
-        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-
+        <div className="mt-6 grid grid-cols-1 gap-x-20 gap-y-8 lg:gap-y-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
           {items.map((item) => (
             <div key={item.id} className="group relative">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                 <img src={item.image} alt="Item Image" 
-                  className="h-full w-full object-cover object-center lg:h-full lg:w-full" />
+                  className="h-[20em] w-full object-cover object-center lg:h-full lg:w-full" />
               </div>
 
               <div className='mt-4 flex justify-between'>
@@ -72,7 +71,7 @@ export const Items = () => {
             </div>
 				))}
         </div>
-    </div>
+      </div>
     </div>
   )
 } 
