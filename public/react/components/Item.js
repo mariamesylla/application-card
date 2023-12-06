@@ -59,32 +59,35 @@ export const ItemContainer = () => {
                     <p className='mt-12'>{item.description}</p>
                 </div>
             </div>
-            <div className='ml-auto'>
 
-                <button
-                onClick={handleClick}
-                className='mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-red-600'
-                >
-                    Delete
-                </button>
-        </div>
-        <div className="ml-auto">
-          <button
-            onClick={handleClick}
-            className="mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-red-600"
-          >
-            Delete
-          </button>
-        </div>
-      </div>
+            {/* BUTTONS */}
+            <div className='flex justify-end w-[30%] bg-black'>
+                {/* DELETE BUTTON */}
+                <div className='ml-auto'>
+                    <button
+                        onClick={handleClick}
+                        className='mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-red-600'
+                    >
+                        Delete
+                    </button>
+                </div>
 
-      {/* Show more the same */}
-      <div className="mt-20 px-4 py-16">
-        <div className="text-center">More the same</div>
-        <div>
-          <SameCategory categoryCheck={item.category} />
+                {/* UPDATE BUTTON */}
+                <div className='ml-auto'>
+                    <button className='mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-red-600'>
+                        <Link to={`/updateItem/${item.id}`}> Update</Link>
+
+                    </button>
+                </div>
+            </div>
+            {/* Show more the same */}
+            <div className="mt-20 px-4 py-16">
+                <div className="text-center">More the same</div>
+                <div>
+                    <SameCategory categoryCheck={item.category} />
+                </div>
+            </div>
         </div>
-      </div>
     </div>
   );
 };

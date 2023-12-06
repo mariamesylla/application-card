@@ -71,7 +71,7 @@ export const UpdateItem = () => {
                     <label className="image">Image:
                         <input type="text" placeholder='image' value={image} onChange={(e) => setImage(e.target.value)} />
                     </label>
-                    <button type="submit"> Submit </button>
+                    <button type="submit">Submit</button>
                 </form>
             </div>
         </>
