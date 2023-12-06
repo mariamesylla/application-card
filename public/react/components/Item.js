@@ -56,15 +56,11 @@ export const ItemContainer = () => {
                         <h2 className='font-bold text-xl mb-1'>{item.name}</h2>
                         <hr />
                         <p className='mt-12'>{item.description}</p>
-                        <button
-                            className='mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-red-600'>
-                            <Link to={`/updateItem/${item.id}`}> Update</Link>
-                        </button>
                     </div>
                 </div>
 
             {/* BUTTONS */}
-            <div className='flex justify-end w-[30%] bg-black'>
+            <div className='flex w-[30%] ml-auto mr-10'>
                 {/* DELETE BUTTON */}
                 <div className='ml-auto'>
                     <button
@@ -78,8 +74,7 @@ export const ItemContainer = () => {
                 {/* UPDATE BUTTON */}
                 <div className='ml-auto'>
                     <button className='mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-red-600'>
-                        <Link to={`/updateItem/${item.id}`}> Update</Link>
-
+                        <Link to={`/updateItem/${item.id}`}>Update</Link>
                     </button>
                 </div>
             </div>

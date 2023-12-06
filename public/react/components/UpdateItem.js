@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import apiURL from '../api';
 
 export const UpdateItem = () => {
@@ -9,6 +9,7 @@ export const UpdateItem = () => {
     const [category, setCategory] = useState()
     const [image, setImage] = useState()
     let { id } = useParams()
+    const navigate = useNavigate() 
 
     const fetchItem = async () => {
         try {
@@ -19,6 +20,7 @@ export const UpdateItem = () => {
             setPrice(data.price)
             setCategory(data.category)
             setImage(data.image)
+            // navigate('/items')
 
         } catch (error) {
             console.log(error)
