@@ -83,9 +83,6 @@ export const ItemContainer = () => {
                 </div>
             </div>
         </div>
-
-        
-    </div>
   )
 } 
 	
