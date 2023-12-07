@@ -126,6 +126,9 @@ export const Carousel = ({categoryCheck}) => {
                         <h3 className="text-white py-6 px-3 mx-auto text-xl">
                           {item.name}
                         </h3>
+                        <h4 className="text-white py-6 px-3 mx-auto text-xl">
+                          ${item.price}
+                        </h4>
                       </a>
                     </div>
                   );
