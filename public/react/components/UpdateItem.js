@@ -20,7 +20,7 @@ export const UpdateItem = () => {
             setPrice(data.price)
             setCategory(data.category)
             setImage(data.image)
-            // navigate('/items')
+            
 
         } catch (error) {
             console.log(error)
@@ -48,6 +48,7 @@ export const UpdateItem = () => {
                     image,
                 })
             })
+            navigate(`/items/${id}`)
         } catch (error) {
             console.log(error)
         }

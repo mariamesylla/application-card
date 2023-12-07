@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import apiURL from '../api';
 
 export const CreateItem = () => {
@@ -8,6 +8,7 @@ const [description, setDescription]= useState('')
 const [price, setPrice] = useState (0)
 const [category, setCategory] = useState('')
 const [image, setImage] = useState ('')
+const navigate = useNavigate() 
 
   const handleSubmit = async (e) => {
 		e.preventDefault()
@@ -31,8 +32,9 @@ const [image, setImage] = useState ('')
                 setDescription('')
                 setPrice(0)
                 setCategory('')
-                setImage('')
+                setImage('')  
             }
+            navigate('/items')
 		} catch (error) {
 			console.log(error)
 		}
