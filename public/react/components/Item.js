@@ -85,7 +85,7 @@ export const ItemContainer = () => {
             <div className="mt-20 px-4 py-16">
                 <div className="text-center">More the same</div>
                 <div>
-                    <Carousel categoryCheck={item.category} />
+                    <Carousel key={item.id} categoryCheck={item.category} />
                 </div>
             </div>
         </div>

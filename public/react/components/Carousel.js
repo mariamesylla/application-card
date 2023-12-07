@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import apiURL from "../api";
 
 export const Carousel = ({categoryCheck}) => {
@@ -28,6 +27,7 @@ export const Carousel = ({categoryCheck}) => {
   const movePrev = () => {
     if (currentIndex > 0) {
       setCurrentIndex((prevState) => prevState - 1);
+      console.log()
     }
   };
 
@@ -38,20 +38,6 @@ export const Carousel = ({categoryCheck}) => {
     ) {
       setCurrentIndex((prevState) => prevState + 1);
     }
-  };
-
-  const isDisabled = (direction) => {
-    if (direction === 'prev') {
-      return currentIndex <= 0;
-    }
-
-    if (direction === 'next' && carousel.current !== null) {
-      return (
-        carousel.current.offsetWidth * currentIndex >= maxScrollWidth.current
-      );
-    }
-
-    return false;
   };
 
   useEffect(() => {
@@ -73,7 +59,6 @@ export const Carousel = ({categoryCheck}) => {
           <button
             onClick={movePrev}
             className="hover:bg-blue-700 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
-            disabled={isDisabled('prev')}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +79,6 @@ export const Carousel = ({categoryCheck}) => {
           <button
             onClick={moveNext}
             className="hover:bg-blue-700 text-white w-10 h-full text-center opacity-75 hover:opacity-100 disabled:opacity-25 disabled:cursor-not-allowed z-10 p-0 m-0 transition-all ease-in-out duration-300"
-            disabled={isDisabled('next')}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -119,33 +103,32 @@ export const Carousel = ({categoryCheck}) => {
         >
         {items.map((item) => {
             if(item.category === categoryCheck){
-                return ( 
-                <div
-                    key={item.id}
-                    className="carousel-item text-center relative w-64 h-64 snap-start"
-                >
-                    <Link to={`/items/${item.id}`}
-                    className="h-full w-full aspect-square block bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0"
-                    style={{ backgroundImage: `url(${item.image || ''})` }}
+                return (
+                    <div
+                      key={item.id}
+                      className="carousel-item text-center relative w-64 h-64 snap-start"
                     >
-                    <img
-                        src={item.image || ''}
-                        alt={item.name}
-                        className="w-full aspect-square hidden"
-                    />
-                    </Link>
-                    <Link to={`/items/${item.id}`}
-                    className="h-full w-full aspect-square block absolute top-0 left-0 transition-opacity duration-300 opacity-0 hover:opacity-100 bg-blue-500/75 z-10"
-                    >
-                    <h3 className="text-white py-6 px-3 mx-auto text-xl">
-                        {item.name}
-                    </h3>
-                    <h4 className="text-white py-6 px-3 mx-auto text-xl">
-                        ${item.price}
-                    </h4>
-                    </Link>
-                </div>
-                ); 
+                      <a
+                        href={`/items/${item.id}`}
+                        className="h-full w-full aspect-square block bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0"
+                        style={{ backgroundImage: `url(${item.image || ''})` }}
+                      >
+                        <img
+                          src={item.image || ''}
+                          alt={item.name}
+                          className="w-full aspect-square hidden"
+                        />
+                      </a>
+                      <a
+                         href={`/items/${item.id}`}
+                        className="h-full w-full aspect-square block absolute top-0 left-0 transition-opacity duration-300 opacity-0 hover:opacity-100 bg-blue-800/75 z-10"
+                      >
+                        <h3 className="text-white py-6 px-3 mx-auto text-xl">
+                          {item.name}
+                        </h3>
+                      </a>
+                    </div>
+                  );
             }
           })} 
         </div>
