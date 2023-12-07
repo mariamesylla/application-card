@@ -38,7 +38,7 @@ export const Navbar = () => {
             <a href="/sauces" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4 hover:text-black duration-500">
               Sauces
             </a>
-            <a href="/items" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4 hover:text-black duration-500">
+            <a href="/CreateItem" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4 hover:text-black duration-500">
               Add Item
             </a>
           </div>
