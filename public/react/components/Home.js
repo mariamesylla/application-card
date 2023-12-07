@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 export const Home = () => {
   return (
-    <div className="bg-white md:max-h-[30%]"  >
+    <div className="bg-white md:max-h-[30%]">
       
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div
@@ -74,7 +74,6 @@ export const Home = () => {
           />
         </div>
       </div>
-  
   </div>
   )
 } 
