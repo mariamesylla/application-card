@@ -1,12 +1,11 @@
-const {Sequelize} = require('sequelize')
-const {sequelize} = require('../db')
+const {User} = require('./user')
+const {Item} = require('./Item')
 
-const Sauce = sequelize.define("sauces", {
-  name: Sequelize.STRING,
-  image: Sequelize.STRING,
-});
+User.hasMany(Item)
+Item.belongsTo(User)
+
 
 module.exports = {
-  db: sequelize,
-  Sauce,
+  User, 
+  Item
 };
