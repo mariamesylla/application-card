@@ -68,7 +68,7 @@ export const ItemContainer = () => {
                 <div className='ml-auto mr-5 md:mr-[-70px]'>
                     <button
                         onClick={handleClick}
-                        className='mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-red-600'
+                        className='mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-indigo-500'
                     >
                         Delete
                     </button>
@@ -76,7 +76,7 @@ export const ItemContainer = () => {
 
                 {/* UPDATE BUTTON */}
                 <div className='ml-auto'>
-                    <button className='mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-red-600'>
+                    <button className='mt-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-indigo-500'>
                         <Link to={`/updateItem/${item.id}`}>Update</Link>
                     </button>
                 </div>
