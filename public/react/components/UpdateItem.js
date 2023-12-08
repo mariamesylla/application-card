@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import apiURL from "../api";
 import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom'
+import apiURL from '../api';
+import { Link } from 'react-router-dom'
 
 export const UpdateItem = () => {
   const [name, setName] = useState();

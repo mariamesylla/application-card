@@ -11,7 +11,6 @@ export const CreateItem = () => {
   const [price, setPrice] = useState(0);
   const [category, setCategory] = useState("");
   const [image, setImage] = useState("");
-
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
