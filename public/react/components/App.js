@@ -8,6 +8,7 @@ import { SaucesList } from "./SaucesList";
 import { Home } from "./Home";
 import { CreateItem } from "./CreateItem";
 import { UpdateItem } from "./UpdateItem";
+import { Register } from "./Register";
 
 export const App = () => {
   return (
@@ -18,6 +19,8 @@ export const App = () => {
         <Route path="/sauces" element={<SaucesList />} />
         <Route path="/createItem" element={<CreateItem />} />
         <Route path="/updateItem/:id" element={<UpdateItem />} />
+		<Route path="/register" element={<Register />} />
+
       </Routes>
   );
 };
