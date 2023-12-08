@@ -12,12 +12,12 @@ import { UpdateItem } from './UpdateItem';
 export const App = () => {
 	return (
 		<Routes>
-			<Route exact path="/" element={<Home />} />
-			<Route exact path="/items" element={<Items />} />
-			<Route exact path="/items/:id" element={<ItemContainer />} />
-			<Route exact path="/sauces" element={<SaucesList />} />
-			<Route exact path="/createItem" element={<CreateItem />} />
-			<Route exact path="/updateItem/:id" element={<UpdateItem />} />
+			<Route  path="/" element={<Home />} />
+			<Route  path="/items" element={<Items />} />
+			<Route  path="/items/:id" element={<ItemContainer />} />
+			<Route  path="/sauces" element={<SaucesList />} />
+			<Route  path="/createItem" element={<CreateItem />} />
+			<Route  path="/updateItem/:id" element={<UpdateItem />} />
 		</Routes>
 	)
 }
