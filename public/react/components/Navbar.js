@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 export const Navbar = () => { 
     const [isOpen, setIsOpen] = useState(false);
 
+
     return (
       <nav className="flex items-center justify-between flex-wrap p-10">
         <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72">
@@ -40,6 +41,9 @@ export const Navbar = () => {
             </a>
             <a href="/createItem" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4 hover:text-black duration-500">
               Add Item
+            </a>
+            <a href="/register" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4 hover:text-black duration-500">
+              Register
             </a>
           </div>
         </div>
