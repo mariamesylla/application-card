@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React  from "react";
 import { Routes, Route } from "react-router-dom";
 
 // import and prepend the api url to any fetch calls
@@ -8,12 +8,9 @@ import { SaucesList } from "./SaucesList";
 import { Home } from "./Home";
 import { CreateItem } from "./CreateItem";
 import { UpdateItem } from "./UpdateItem";
-import { Navbar } from "./Navbar";
 
 export const App = () => {
   return (
-    <>
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/items" element={<Items />} />
@@ -22,6 +19,5 @@ export const App = () => {
         <Route path="/createItem" element={<CreateItem />} />
         <Route path="/updateItem/:id" element={<UpdateItem />} />
       </Routes>
-    </>
   );
 };

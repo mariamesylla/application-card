@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate, Link} from "react-router-dom";
 import apiURL from "../api";
-import { UpdateItem } from "./UpdateItem";
 import { Carousel } from "./Carousel";
 
 export const ItemContainer = () => {

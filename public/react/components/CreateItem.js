@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import apiURL from "../api";
 import { Link } from "react-router-dom";
 
-<link rel="stylesheet" href="../../style.css" />;
-
 export const CreateItem = () => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
