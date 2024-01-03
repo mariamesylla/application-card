@@ -6,9 +6,9 @@ export const Navbar = () => {
 
 
     return (
-      <nav className="flex items-center justify-between flex-wrap p-10">
+      <nav className="flex items-center justify-between flex-wrap p-0">
         <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-72">
-          <Link to='/'><h1 className="w-full text-3xl font-medium text-blue-500">Team Blue.</h1></Link>
+          <Link to='/'> <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/brand/centurion-linear-brightblue.svg" width={100}/> </Link>
         </div>
         <div className="block lg:hidden">
           <button
@@ -32,18 +32,15 @@ export const Navbar = () => {
           </button>
         </div>
        <div className={`w-[80%] block flex-grow lg:flex lg:items-center lg:w-auto ease-in-out duration-500 ${isOpen ? "block" : "hidden"}`} >
-          <div className="text-sm lg:flex-grow text-left lg:text-right">
-            <a href="/items" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4  hover:text-black duration-500">
-              Items
+          <div className="text-xl lg:flex-grow text-left lg:text-right">
+          <a href="/cards" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4  hover:text-black duration-500">
+              Cards Info
             </a>
-            <a href="/sauces" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4 hover:text-black duration-500">
-              Sauces
-            </a>
-            <a href="/createItem" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4 hover:text-black duration-500">
-              Add Item
+            <a href="/Form" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4 hover:text-black duration-500">
+              Apply
             </a>
             <a href="/register" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4 hover:text-black duration-500">
-              Register
+              Log In
             </a>
           </div>
         </div>

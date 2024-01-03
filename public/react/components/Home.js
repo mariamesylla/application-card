@@ -1,9 +1,14 @@
 import React from 'react';
-
+import { useParams, useNavigate, Link} from "react-router-dom";
 
 export const Home = () => {
+  const navigate = useNavigate();
+
+  const handleClick = async () => {
+    navigate("/Form");
+  };
   return (
-    <div className="bg-white md:max-h-[30%]">
+    <div className="bg-sky-300 md:max-h-[30%]">
       
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div
@@ -11,53 +16,109 @@ export const Home = () => {
           aria-hidden="true"
         >
           <div
-            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#60A5FA] to-[#60A5FA] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#3b82f6] to-[#30A5FA] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
             style={{
               clipPath:
                 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              By Magnan, Kairi, Hector and Nicholas {' '}
-              {/* <a href="/items" className="font-semibold text-indigo-600">
-                <span className="absolute inset-0" aria-hidden="true" />
-                Here <span aria-hidden="true">&rarr;</span>
-              </a> */}
-            </div>
-          </div>
+        <div className="text-center">
+            <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Apply for a credit card 
+            </h2>
+           </div> 
+        <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56">
+          
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Inventory App 
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-            This is an Inventory App designed to track and manage product sales, material purchases and other common production processes. 
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="/items"
-                className="rounded-md bg-blue-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Go to Items Available
-              </a>
-             
+            
+            <div className="mt-0 flex items-center justify-center gap-x-6">
+      
+               <div>
+                      <div class="col-lg-4 col-md-6 pad">
+                          <p class="dls-gray-04 margin-b text-align-center"><strong>CoBrand</strong></p>
+                          <div class="dls-card-lg dls-card-tilt">
+                              <div class="dls-card-tilt-left"></div>
+                              <div class="dls-card-tilt-right"></div>
+                              <div class="dls-card-tilt-container">
+                                <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/delta_gold_bus_chip_480x304.png" />
+                              </div>
+                          </div>
+                
+                      </div>
+                      <div className='inset-x-0 top-0'>
+                          <button
+                          onClick={handleClick}
+                          className='mt-2 px-10 py-2 bg-blue-500 text-white rounded-md hover:bg-indigo-500'
+                          >
+                              Apply
+                          </button>
+                          </div>
+  
+              </div>
+                      <div class="col-lg-4 col-md-6 pad">
+                          <p class="dls-gray-04 margin-b text-align-center"><strong>Corporate</strong></p>
+                          <div class="dls-card-lg dls-card-tilt">
+                              <div class="dls-card-tilt-left"></div>
+                              <div class="dls-card-tilt-right"></div>
+                              <div class="dls-card-tilt-container">
+                                <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/corp_plat_chip_480x304.png" />
+                              </div>
+                          </div>
+                          <div className='inset-x-0 top-0'>
+                          <button
+                          onClick={handleClick}
+                          className='mt-2 px-10 py-2 bg-blue-500 text-white rounded-md hover:bg-indigo-500'
+                          >
+                              Apply
+                          </button>
+                          </div>
+                      </div>
 
-              <a
-                href="/sauces"
-                className="rounded-md bg-blue-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Go to Sauces Available
-              </a>
+                      <div class="col-lg-4 col-md-6 pad">
+                          <p class="dls-gray-04 margin-b text-align-center"><strong>Generic</strong></p>
+                          <div class="dls-card-lg dls-card-tilt">
+                              <div class="dls-card-tilt-left"></div>
+                              <div class="dls-card-tilt-right"></div>
+                              <div class="dls-card-tilt-container">
+                                <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/amex_generic_chip_480x304.png" />
+                              </div>
+                              <div className='inset-x-0 top-0'>
+                          <button
+                          onClick={handleClick}
+                          className='mt-2 px-10 py-2 bg-blue-500 text-white rounded-md hover:bg-indigo-500'
+                          >
+                              Apply
+                          </button>
+                          </div>
+                          </div>
+                          
+                      </div>
+                      <div class="col-lg-4 col-md-6 pad">
+                          <p class="dls-gray-04 margin-b text-align-center"><strong>Prepaid</strong></p>
+                          <div class="dls-card-lg dls-card-tilt">
+                              <div class="dls-card-tilt-left"></div>
+                              <div class="dls-card-tilt-right"></div>
+                              <div class="dls-card-tilt-container">
+                                <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/serve_free_reloads_perm_480x304.png" />
+                              </div>
+                          </div>
+                          <div className='inset-x-0 top-0'>
+                          <button
+                          onClick={handleClick}
+                          className='mt-2 px-10 py-2 bg-blue-500 text-white rounded-md hover:bg-indigo-500'
+                          >
+                              Apply
+                          </button>
+                          </div>
+                      </div>
+                     
+            
 
-              <a
-                href="/createItem"
-                className="rounded-md bg-blue-400 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Click here to Add items
-              </a>
+            
+              
             </div>
+            
           </div>
         </div>
         <div

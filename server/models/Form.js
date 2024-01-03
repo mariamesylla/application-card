@@ -1,6 +1,6 @@
 const { sequelize, DataTypes } = require('../db.js');
 
-const Item = sequelize.define('Item',{
+const Item = sequelize.define('Form',{
     name: DataTypes.STRING,
     description: DataTypes.STRING,
     price: DataTypes.FLOAT,
@@ -10,5 +10,5 @@ const Item = sequelize.define('Item',{
 
 
 module.exports = {
-    Item
+    Form
 };
