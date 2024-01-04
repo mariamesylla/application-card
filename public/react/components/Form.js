@@ -61,12 +61,12 @@ export const Form = () => {
   return (
     <div className="bg-gray-100 min-h-screen flex items-center justify-center">
       <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold mb-6">Bank Application</h2>
+        <h2 className="text-2xl font-bold mb-6">Card Application</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label htmlFor="fullName" className="block text-sm font-semibold mb-2">Full Name</label>
             <input type="text" id="fullName" name="fullName" value={formData.fullName}
-               //onChange={handleInputChange}
+               onChange={handleInputChange}
               className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500"
               placeholder="Enter your full name" required />
           </div>
@@ -107,7 +107,7 @@ export const Form = () => {
               placeholder="Enter your total income" required />
           </div>
           
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between" >
             <button type="submit" onClick={handleClick} className="bg-blue-500 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:bg-blue-600 hover:bg-blue-600">
               Submit
             </button>

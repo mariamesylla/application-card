@@ -38,9 +38,8 @@ export const Home = () => {
                       <div class="col-lg-4 col-md-6 pad">
                           <p class="dls-gray-04 margin-b text-align-center"><strong>CoBrand</strong></p>
                           <div class="dls-card-lg dls-card-tilt">
-                              <div class="dls-card-tilt-left"></div>
-                              <div class="dls-card-tilt-right"></div>
-                              <div class="dls-card-tilt-container">
+                              
+                              <div class="hover:animate-bounce " >
                                 <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/delta_gold_bus_chip_480x304.png" />
                               </div>
                           </div>
@@ -59,9 +58,8 @@ export const Home = () => {
                       <div class="col-lg-4 col-md-6 pad">
                           <p class="dls-gray-04 margin-b text-align-center"><strong>Corporate</strong></p>
                           <div class="dls-card-lg dls-card-tilt">
-                              <div class="dls-card-tilt-left"></div>
-                              <div class="dls-card-tilt-right"></div>
-                              <div class="dls-card-tilt-container">
+                    
+                              <div class="hover:animate-bounce" >
                                 <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/corp_plat_chip_480x304.png" />
                               </div>
                           </div>
@@ -78,9 +76,7 @@ export const Home = () => {
                       <div class="col-lg-4 col-md-6 pad">
                           <p class="dls-gray-04 margin-b text-align-center"><strong>Generic</strong></p>
                           <div class="dls-card-lg dls-card-tilt">
-                              <div class="dls-card-tilt-left"></div>
-                              <div class="dls-card-tilt-right"></div>
-                              <div class="dls-card-tilt-container">
+                              <div class="hover:animate-bounce">
                                 <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/amex_generic_chip_480x304.png" />
                               </div>
                               <div className='inset-x-0 top-0'>
@@ -97,9 +93,7 @@ export const Home = () => {
                       <div class="col-lg-4 col-md-6 pad">
                           <p class="dls-gray-04 margin-b text-align-center"><strong>Prepaid</strong></p>
                           <div class="dls-card-lg dls-card-tilt">
-                              <div class="dls-card-tilt-left"></div>
-                              <div class="dls-card-tilt-right"></div>
-                              <div class="dls-card-tilt-container">
+                              <div class="hover:animate-bounce">
                                 <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/serve_free_reloads_perm_480x304.png" />
                               </div>
                           </div>
