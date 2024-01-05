@@ -55,6 +55,13 @@ export const Form = () => {
       });
       setErrors({});
     }
+
+    if (income !== '' && Number(income) < 50000) {
+      navigate("/approval");
+    } else {
+      navigate("/declined");
+    }
+  
   };
 
 

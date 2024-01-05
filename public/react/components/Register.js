@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import apiURL from "../api";
 import { Link } from "react-router-dom";
 
 
