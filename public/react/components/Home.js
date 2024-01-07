@@ -5,7 +5,7 @@ export const Home = () => {
   const navigate = useNavigate();
 
   const handleClick = async () => {
-    navigate("/Form");
+    navigate("/");
   };
   return (
     <div className="bg-sky-300 md:max-h-[30%]">

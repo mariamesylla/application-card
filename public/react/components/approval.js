@@ -5,14 +5,6 @@ export const Approval = () => {
     const firstName = localStorage.getItem('firstName');
     const totalIncome = parseFloat(localStorage.getItem('totalIncome'));
 
-    let message = '';
-    if (totalIncome >= 50000) {
-        message = `Congratulations, ${firstName}! Your credit card application is approved.`;
-    } else {
-        message = `Sorry, ${firstName}. Your credit card application is declined.`;
-    }
-
-
     const navigate = useNavigate();
 
     const handleClick = async () => {
@@ -36,10 +28,11 @@ export const Approval = () => {
           </div>
           <div className="text-center">
               <h3 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Congratulations, {firstName}, You qualify for this credit card .
+              {totalIncome >= 50000 ? `Congratulations, ${firstName} , You qualify for this
+              credit card.` : `Sorry, ${firstName}, You don't qualify for this credit card.`}
 
          </h3>
-
+            <p></p>
         <h5>We'll process your application as soon as possible and send you a decision within 14 days.
 </h5>
          <p>There has been no impact to your credit score at this time. If you're approved and choose to accept the Card, the information we provide to credit bureau(s) may impact your credit score.
