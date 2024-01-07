@@ -2,8 +2,16 @@ import {React, useState} from 'react';
 import { useParams, useNavigate, Link} from "react-router-dom";
 
 export const Approval = () => {
-    const [income, setIncome] = useState('');
-    const [decision, setDecision] = useState('');
+    const firstName = localStorage.getItem('firstName');
+    const totalIncome = parseFloat(localStorage.getItem('totalIncome'));
+
+    let message = '';
+    if (totalIncome >= 50000) {
+        message = `Congratulations, ${firstName}! Your credit card application is approved.`;
+    } else {
+        message = `Sorry, ${firstName}. Your credit card application is declined.`;
+    }
+
 
     const navigate = useNavigate();
 
@@ -28,7 +36,7 @@ export const Approval = () => {
           </div>
           <div className="text-center">
               <h3 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Thanks, {} We've received your application, but we can't give you a decision right now.
+              Congratulations, {firstName}, You qualify for this credit card .
 
          </h3>
 

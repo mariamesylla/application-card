@@ -3,123 +3,211 @@ import React, { useState } from 'react';
 import { useParams, useNavigate, Link} from "react-router-dom";
 
 export const Form = () => {
-
-
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phoneNumber: '',
-    dateOfBirth: '',
-    detailedAddress: '',
-    ssn: '',
-    totalIncome: '',
-  });
   const navigate = useNavigate();
 
-  const handleClick = async () => {
-    navigate("/approval");
-  };
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    street: '',
+    state: '',
+    city: '',
+    zipCode: '',
+    ssn: '',
+    dateOfBirth: '',
+    totalIncome: '',
+  });
+
   const [errors, setErrors] = useState({});
 
-  const handleInputChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const validationErrors = {};
 
-    // Basic validation - Check for empty fields
-    const newErrors = {};
+    // Basic validation - checking for empty fields
     for (const key in formData) {
       if (formData[key] === '') {
-        newErrors[key] = `${key.charAt(0).toUpperCase() + key.slice(1)} is required`;
+        validationErrors[key] = `${key.charAt(0).toUpperCase() + key.slice(1)} is required`;
       }
     }
 
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
     } else {
-      // Form is valid - Handle form submission here
-      // For example, you can send the form data to an API or perform other actions
-      console.log('Form submitted:', formData);
-      // Reset form and errors after submission (if needed)
-      setFormData({
-        fullName: '',
-        email: '',
-        phoneNumber: '',
-        dateOfBirth: '',
-        detailedAddress: '',
-        ssn: '',
-        totalIncome: '',
-      });
-      setErrors({});
-    }
+      // Store the first name and total income
+      localStorage.setItem('firstName', formData.firstName);
+      localStorage.setItem('totalIncome', formData.totalIncome);
 
-    if (income !== '' && Number(income) < 50000) {
-      navigate("/approval");
-    } else {
-      navigate("/declined");
+      // Redirect to the decision page
+      navigate('/approval');
     }
-  
   };
 
 
   return (
     <div className="bg-gray-100 min-h-screen flex items-center justify-center">
       <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold mb-6">Card Application</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label htmlFor="fullName" className="block text-sm font-semibold mb-2">Full Name</label>
-            <input type="text" id="fullName" name="fullName" value={formData.fullName}
-               onChange={handleInputChange}
-              className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500"
-              placeholder="Enter your full name" required />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-semibold mb-2">Email Address</label>
-            <input type="email" id="email" name="email"
-              className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500"
-              placeholder="Enter your email address" required />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="phoneNumber" className="block text-sm font-semibold mb-2">Phone Number</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber"
-              className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500"
-              placeholder="Enter your phone number" required />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="dateOfBirth" className="block text-sm font-semibold mb-2">Date of Birth</label>
-            <input type="date" id="dateOfBirth" name="dateOfBirth"
-              className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500"
-              placeholder="Enter your date of birth" required />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="detailedAddress" className="block text-sm font-semibold mb-2"> Address</label>
-            <textarea id="detailedAddress" name="detailedAddress"
-              className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500"
-              placeholder="Enter your detailed address" required />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="ssn" className="block text-sm font-semibold mb-2">Social Security Number</label>
-            <input type="text" id="ssn" name="ssn"
-              className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500"
-              placeholder="Enter your SSN" required />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="totalIncome" className="block text-sm font-semibold mb-2">Total Income</label>
-            <input type="number" id="totalIncome" name="totalIncome"
-              className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:border-blue-500"
-              placeholder="Enter your total income" required />
-          </div>
-          
-          <div className="flex items-center justify-between" >
-            <button type="submit" onClick={handleClick} className="bg-blue-500 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:bg-blue-600 hover:bg-blue-600">
-              Submit
-            </button>
-          </div>
-        </form>
+        <h2 className="text-2xl font-bold mb-6">Credit Card Application</h2>
+        <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8">
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="firstName" className="block mb-2 text-sm font-semibold text-gray-600">
+            First Name
+          </label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            value={formData.firstName}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+          />
+          {errors.firstName && <p className="text-red-500 text-xs mt-1">{errors.firstName}</p>}
+        </div>
+        <div>
+          <label htmlFor="lastName" className="block mb-2 text-sm font-semibold text-gray-600">
+            Last Name
+          </label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+          />
+          {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
+        </div>
+      </div>
+
+      <div className="mt-4">
+        <label htmlFor="street" className="block mb-2 text-sm font-semibold text-gray-600">
+          Street Address
+        </label>
+        <input
+          type="text"
+          id="street"
+          name="street"
+          value={formData.street}
+          onChange={handleChange}
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+        />
+        {errors.street && <p className="text-red-500 text-xs mt-1">{errors.street}</p>}
+      </div>
+
+      <div className="grid grid-cols-2 gap-4 mt-4">
+        <div>
+          <label htmlFor="state" className="block mb-2 text-sm font-semibold text-gray-600">
+            State
+          </label>
+          <input
+            type="text"
+            id="state"
+            name="state"
+            value={formData.state}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+          />
+          {errors.state && <p className="text-red-500 text-xs mt-1">{errors.state}</p>}
+        </div>
+        <div>
+          <label htmlFor="city" className="block mb-2 text-sm font-semibold text-gray-600">
+            City
+          </label>
+          <input
+            type="text"
+            id="city"
+            name="city"
+            value={formData.city}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+          />
+          {errors.city && <p className="text-red-500 text-xs mt-1">{errors.city}</p>}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4 mt-4">
+        <div>
+          <label htmlFor="zipCode" className="block mb-2 text-sm font-bold text-gray-600">
+            Zip Code
+          </label>
+          <input
+            type="text"
+            id="zipCode"
+            name="zipCode"
+            value={formData.zipCode}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+          />
+          {errors.zipCode && <p className="text-red-500 text-xs mt-1">{errors.zipCode}</p>}
+        </div>
+        <div>
+          <label htmlFor="ssn" className="block mb-2 text-sm font-semibold text-gray-600">
+            Social Security Number
+          </label>
+          <input
+            type="text"
+            id="ssn"
+            name="ssn"
+            value={formData.ssn}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+          />
+          {errors.ssn && <p className="text-red-500 text-xs mt-1">{errors.ssn}</p>}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-2 gap-4 mt-4">
+        <div>
+          <label htmlFor="dateOfBirth" className="block mb-2 text-sm font-semibold text-gray-600">
+            Date of Birth
+          </label>
+          <input
+            type="date"
+            id="dateOfBirth"
+            name="dateOfBirth"
+            value={formData.dateOfBirth}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+          />
+          {errors.dateOfBirth && (
+            <p className="text-red-500 text-xs mt-1">{errors.dateOfBirth}</p>
+          )}
+        </div>
+        <div>
+          <label htmlFor="totalIncome" className="block mb-2 text-sm font-semibold text-gray-600">
+            Total Income
+          </label>
+          <input
+            type="number"
+            id="totalIncome"
+            name="totalIncome"
+            value={formData.totalIncome}
+            onChange={handleChange}
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+          />
+          {errors.totalIncome && (
+            <p className="text-red-500 text-xs mt-1">{errors.totalIncome}</p>
+          )}
+        </div>
+      </div>
+
+      <div className="mt-6">
+        <button
+          type="submit"
+          className="w-full py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
       </div>
     </div>
   );

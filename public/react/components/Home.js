@@ -37,13 +37,11 @@ export const Home = () => {
                <div>
                       <div class="col-lg-4 col-md-6 pad">
                           <p class="dls-gray-04 margin-b text-align-center"><strong>CoBrand</strong></p>
-                          <div class="dls-card-lg dls-card-tilt">
-                              
                               <div class="hover:animate-bounce " >
+                              <a href='/cards'>
                                 <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/delta_gold_bus_chip_480x304.png" />
-                              </div>
-                          </div>
-                
+                              </a>
+                              </div>                
                       </div>
                       <div className='inset-x-0 top-0'>
                           <button
@@ -57,12 +55,11 @@ export const Home = () => {
               </div>
                       <div class="col-lg-4 col-md-6 pad">
                           <p class="dls-gray-04 margin-b text-align-center"><strong>Corporate</strong></p>
-                          <div class="dls-card-lg dls-card-tilt">
-                    
                               <div class="hover:animate-bounce" >
+                              <a href='/cards'>
                                 <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/corp_plat_chip_480x304.png" />
+                             </a>
                               </div>
-                          </div>
                           <div className='inset-x-0 top-0'>
                           <button
                           onClick={handleClick}
@@ -75,9 +72,10 @@ export const Home = () => {
 
                       <div class="col-lg-4 col-md-6 pad">
                           <p class="dls-gray-04 margin-b text-align-center"><strong>Generic</strong></p>
-                          <div class="dls-card-lg dls-card-tilt">
                               <div class="hover:animate-bounce">
+                              <a href='/cards'>
                                 <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/amex_generic_chip_480x304.png" />
+                              </a>
                               </div>
                               <div className='inset-x-0 top-0'>
                           <button
@@ -86,17 +84,17 @@ export const Home = () => {
                           >
                               Apply
                           </button>
-                          </div>
+                         
                           </div>
                           
                       </div>
                       <div class="col-lg-4 col-md-6 pad">
                           <p class="dls-gray-04 margin-b text-align-center"><strong>Prepaid</strong></p>
-                          <div class="dls-card-lg dls-card-tilt">
                               <div class="hover:animate-bounce">
+                                <a href='/cards'>
                                 <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/serve_free_reloads_perm_480x304.png" />
+                              </a>
                               </div>
-                          </div>
                           <div className='inset-x-0 top-0'>
                           <button
                           onClick={handleClick}
@@ -106,11 +104,6 @@ export const Home = () => {
                           </button>
                           </div>
                       </div>
-                     
-            
-
-            
-              
             </div>
             
           </div>
