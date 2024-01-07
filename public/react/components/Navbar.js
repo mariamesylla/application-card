@@ -39,9 +39,6 @@ export const Navbar = () => {
             <a href="/Form" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4 hover:text-black duration-500">
               Apply
             </a>
-            <a href="/register" className="block mt-4 lg:inline-block lg:mt-0 text-blue-400 mr-4 hover:text-black duration-500">
-              Log In
-            </a>
           </div>
         </div>
       </nav>

@@ -17,98 +17,154 @@ export const Card = () => {
             }}
           />
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-        <div className="text-center">
-        <div class="row">
-        <div class="grid grid-flow-row-dense grid-cols-3 grid-rows-3 ..."></div>
-        <div class="col-lg-4 col-md-6 pad">
-            <p class="dls-gray-04 margin-b text-align-center"><strong>CoBrand</strong></p>
+        <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+      <div class="p-8 sm:p-10 lg:flex-auto">
+          <h4 class="flex-none text-sm font-semibold leading-6 text-red-600">What’s included</h4>
+          <div class="h-px flex-auto bg-gray-100"></div>
+
+        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-white-600 sm:grid-cols-2 sm:gap-6">
+        <p>Amex EveryDay® Preferred Credit Card
+                    Annual Fee $95¤
+                    Offer & Benefit Terms
+                    ¤ Rates & Fees
+                    0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
+              
+         
+        </div>
+      </div>
+      <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+          <div class="mx-auto max-w-xs px-8">
+          <p class="dls-gray-04 margin-b text-align-center"><strong>CoBrand</strong></p>
                 <div >
                   <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/delta_gold_bus_chip_480x304.png" />
               </div>
-              <div class="col-span-2">
-                <p>Amex EveryDay® Preferred Credit Card
+            </div>
+      </div>
+    </div>
+       
+
+    <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+      <div class="p-8 sm:p-10 lg:flex-auto">
+          <h4 class="flex-none text-sm font-semibold leading-6 text-red-600">What’s included</h4>
+          <div class="h-px flex-auto bg-gray-100"></div>
+
+        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
+        <p>Amex EveryDay® Preferred Credit Card
                     Annual Fee $95¤
-                    ♦‡†Offer & Benefit Terms
+                    Offer & Benefit Terms
                     ¤ Rates & Fees
                     0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
-              </div>
         </div>
-        
-        <div class="col-lg-4 col-md-6 pad">
-            <p class="dls-gray-04 margin-b text-align-center"><strong>Consumer</strong></p>
+      </div>
+      <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+          <div class="mx-auto max-w-xs px-8">
+          <p class="dls-gray-04 margin-b text-align-center"><strong>Consumer</strong></p>
                 <div >
-                  <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/blue_chip_480x304.png" />
+                <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/blue_chip_480x304.png" />
+              </div>
             </div>
+      </div>
+    </div>
 
-            <div>
-                <p>Amex EveryDay® Preferred Credit Card
+    <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+      <div class="p-8 sm:p-10 lg:flex-auto">
+          <h4 class="flex-none text-sm font-semibold leading-6 text-red-600">What’s included</h4>
+          <div class="h-px flex-auto bg-gray-100"></div>
+
+        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
+        <p>Amex EveryDay® Preferred Credit Card
                     Annual Fee $95¤
-                    ♦‡†Offer & Benefit Terms
+                    Offer & Benefit Terms
                     ¤ Rates & Fees
                     0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
-              </div>
-        </div>
-        <div class="col-lg-4 col-md-6 pad">
-            <p class="dls-gray-04 margin-b text-align-center"><strong>Corporate</strong></p>
-    
-                <div class="dls-card-tilt-container">
-                  <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/corp_plat_chip_480x304.png" />
               
-              </div>
-              <div>
-                <p>Amex EveryDay® Preferred Credit Card
-                    Annual Fee $95¤
-                    ♦‡†Offer & Benefit Terms
-                    ¤ Rates & Fees
-                    0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
-              </div>
         </div>
-        <div class="col-lg-4 col-md-6 pad">
-            <p class="dls-gray-04 margin-b text-align-center"><strong>Generic</strong></p>
-                <div class="dls-card-tilt-container">
-                  <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/amex_generic_chip_480x304.png" />
-                  <div>
-                <p>Amex EveryDay® Preferred Credit Card
-                    Annual Fee $95¤
-                    ♦‡†Offer & Benefit Terms
-                    ¤ Rates & Fees
-                    0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
+      </div>
+      <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+          <div class="mx-auto max-w-xs px-8">
+          <p class="dls-gray-04 margin-b text-align-center"><strong>Corporate</strong></p>
+                <div >
+                <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/corp_plat_chip_480x304.png" />
               </div>
             </div>
-        </div>
-        <div class="col-lg-4 col-md-6 pad">
-            <p class="dls-gray-04 margin-b text-align-center"><strong>Prepaid</strong></p>
-                <div class="dls-card-tilt-container">
-                  <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/serve_free_reloads_perm_480x304.png" />
-                  <div>
-                <p>Amex EveryDay® Preferred Credit Card
+      </div>
+    </div>
+
+
+    <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+      <div class="p-8 sm:p-10 lg:flex-auto">
+          <h4 class="flex-none text-sm font-semibold leading-6 text-red-600">What’s included</h4>
+          <div class="h-px flex-auto bg-gray-100"></div>
+
+        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-white-600 sm:grid-cols-2 sm:gap-6">
+        <p>Amex EveryDay® Preferred Credit Card
                     Annual Fee $95¤
-                    ♦‡†Offer & Benefit Terms
+                    Offer & Benefit Terms
                     ¤ Rates & Fees
                     0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
+              
+        </div>
+      </div>
+      <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+          <div class="mx-auto max-w-xs px-8">
+          <p class="dls-gray-04 margin-b text-align-center"><strong>Generic</strong></p>
+                <div >
+                <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/amex_generic_chip_480x304.png" />
               </div>
             </div>
-        </div>
-        <div class="col-lg-4 col-md-6 pad">
-            <p class="dls-gray-04 margin-b text-align-center"><strong>Small Business</strong></p>
-                <div class="dls-card-tilt-container">
-                  <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/sbs_plum_chip_480x304.png" />
-            </div>
-            <div>
-                <p>Amex EveryDay® Preferred Credit Card
+      </div>
+    </div>
+        
+
+    <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+      <div class="p-8 sm:p-10 lg:flex-auto">
+          <h4 class="flex-none text-sm font-semibold leading-6 text-red-600">What’s included</h4>
+          <div class="h-px flex-auto bg-gray-100"></div>
+        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
+        <p>Amex EveryDay® Preferred Credit Card
                     Annual Fee $95¤
-                    ♦‡†Offer & Benefit Terms
+                    Offer & Benefit Terms
                     ¤ Rates & Fees
                     0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
-              </div>
         </div>
+      </div>
+      <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+          <div class="mx-auto max-w-xs px-8">
+          <p class="dls-gray-04 margin-b text-align-center"><strong>Prepaid</strong></p>
+                <div >
+                <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/serve_free_reloads_perm_480x304.png" />
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
+      <div class="p-8 sm:p-10 lg:flex-auto">
+          <h4 class="flex-none text-sm font-semibold leading-6 text-red-600">What’s included</h4>
+          <div class="h-px flex-auto bg-gray-100"></div>
+
+        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
+        <p>Amex EveryDay® Preferred Credit Card
+                    Annual Fee $95¤
+                    Offer & Benefit Terms
+                    ¤ Rates & Fees
+                    0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
+         
+        </div>
+      </div>
+      <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
+          <div class="mx-auto max-w-xs px-8">
+          <p class="dls-gray-04 margin-b text-align-center"><strong>Small Business</strong></p>
+                <div >
+                <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/sbs_plum_chip_480x304.png" />
+              </div>
+            </div>
+      </div>
+    </div>
       </div>
       </div>
 
-  </div>
-  </div>
-  </div>
+ 
   )
 } 
 

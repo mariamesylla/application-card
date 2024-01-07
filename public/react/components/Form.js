@@ -54,7 +54,7 @@ export const Form = () => {
   return (
     <div className="bg-gray-100 min-h-screen flex items-center justify-center">
       <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-md">
-        <h2 className="text-2xl font-bold mb-6">Credit Card Application</h2>
+        <h2 className="text-2xl font-bold mb-6 " >Credit Card Application</h2>
         <form onSubmit={handleSubmit} className="max-w-md mx-auto mt-8">
       <div className="grid grid-cols-2 gap-4">
         <div>
