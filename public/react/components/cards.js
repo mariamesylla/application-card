@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Card = () => {
   return (
-    <div className="bg-sky-300 md:max-h-[30%]">
+    <div className="bg-blue-300 md:max-h-[30%]">
       
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div

@@ -1,6 +1,6 @@
 import React from 'react';
 import React, { useState } from 'react';
-import { useNavigate} from "react-router-dom";
+import { useParams, useNavigate, Link} from "react-router-dom";
 
 export const Form = () => {
   const navigate = useNavigate();
@@ -32,20 +32,31 @@ export const Form = () => {
     const validationErrors = {};
 
     // Basic validation - checking for empty fields
-    for (const key in formData) {
-      if (formData[key] === '') {
-        validationErrors[key] = `${key.charAt(0).toUpperCase() + key.slice(1)} is required`;
-      }
-    }
 
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-    } else {
+
+    if (formData.firstName === '') { 
+      validationErrors.firstName = 'First Name is required'; } 
+    
+    if (formData.ssn === '') { 
+      validationErrors.ssn = 'Social Security Number is required'; } 
+
+    if (formData.state === '') { 
+      validationErrors.state = 'State required'; }
+
+    if (formData.zipCode === '') { 
+      validationErrors.zipCode = 'Zip Code required'; }
+      
+    if (formData.totalIncome === '') { 
+      validationErrors.totalIncome = 'Total Income required'; } 
+    
+    if (Object.keys(validationErrors).length > 0) { 
+        
+      setErrors(validationErrors); } else {
       // Store the first name and total income
       localStorage.setItem('firstName', formData.firstName);
       localStorage.setItem('totalIncome', formData.totalIncome);
 
-      // Redirect to the approval page
+      // Redirect to the decision page
       navigate('/approval');
     }
   };
@@ -83,7 +94,6 @@ export const Form = () => {
             onChange={handleChange}
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
           />
-          {errors.lastName && <p className="text-red-500 text-xs mt-1">{errors.lastName}</p>}
         </div>
       </div>
 
@@ -128,13 +138,12 @@ export const Form = () => {
             onChange={handleChange}
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
           />
-          {errors.city && <p className="text-red-500 text-xs mt-1">{errors.city}</p>}
         </div>
       </div>
 
       <div className="grid grid-cols-2 gap-4 mt-4">
         <div>
-          <label htmlFor="zipCode" className="block mb-2 text-sm font-bold text-gray-600">
+          <label htmlFor="zipCode" className="block mb-2 text-sm font-semibold text-gray-600">
             Zip Code
           </label>
           <input

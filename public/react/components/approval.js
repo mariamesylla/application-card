@@ -28,14 +28,14 @@ export const Approval = () => {
           </div>
           <div className="text-center">
               <h3 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              {totalIncome >= 50000 ? `Congratulations, ${firstName} , You qualify for this
+              {totalIncome >= 50000 ? `Congratulations ${firstName} , You qualify for this
               credit card.` : `Sorry, ${firstName}, You don't qualify for this credit card.`}
 
          </h3>
             <p></p>
         <h5>We'll process your application as soon as possible and send you a decision within 14 days.
 </h5>
-         <p>There has been no impact to your credit score at this time. If you're approved and choose to accept the Card, the information we provide to credit bureau(s) may impact your credit score.
+         <p>There has been no impact to your credit score at this time. You are approved and choose to accept the Card, the information we provide to credit bureau(s) may impact your credit score.
 
 While we're reviewing your application, please don't submit another application for the American Express® Gold Card.
      </p>
