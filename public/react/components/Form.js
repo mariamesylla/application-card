@@ -1,6 +1,6 @@
 import React from 'react';
 import React, { useState } from 'react';
-import { useParams, useNavigate, Link} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
 export const Form = () => {
   const navigate = useNavigate();
@@ -45,7 +45,7 @@ export const Form = () => {
       localStorage.setItem('firstName', formData.firstName);
       localStorage.setItem('totalIncome', formData.totalIncome);
 
-      // Redirect to the decision page
+      // Redirect to the approval page
       navigate('/approval');
     }
   };
@@ -99,7 +99,6 @@ export const Form = () => {
           onChange={handleChange}
           className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
         />
-        {errors.street && <p className="text-red-500 text-xs mt-1">{errors.street}</p>}
       </div>
 
       <div className="grid grid-cols-2 gap-4 mt-4">
@@ -177,9 +176,6 @@ export const Form = () => {
             onChange={handleChange}
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
           />
-          {errors.dateOfBirth && (
-            <p className="text-red-500 text-xs mt-1">{errors.dateOfBirth}</p>
-          )}
         </div>
         <div>
           <label htmlFor="totalIncome" className="block mb-2 text-sm font-semibold text-gray-600">
