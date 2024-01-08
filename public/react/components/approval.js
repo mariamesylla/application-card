@@ -46,8 +46,6 @@ While we're reviewing your application, please don't submit another application 
               
               <div className="mt-0 flex items-center justify-center gap-x-6">
       
-                 
-                
               </div>
               
             </div>
