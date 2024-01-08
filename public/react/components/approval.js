@@ -29,7 +29,7 @@ export const Approval = () => {
           <div className="text-center">
               <h3 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               {totalIncome >= 50000 ? `Congratulations ${firstName} , You qualify for this
-              credit card.` : `Sorry, ${firstName}, You don't qualify for this credit card.`}
+              credit card.` : `Sorry ${firstName}, You don't qualify for this credit card.`}
 
          </h3>
             <p></p>
@@ -45,89 +45,8 @@ While we're reviewing your application, please don't submit another application 
             <div className="text-center">
               
               <div className="mt-0 flex items-center justify-center gap-x-6">
-        
-                 <div>
-                        <div class="col-lg-4 col-md-6 pad">
-                            <p class="dls-gray-04 margin-b text-align-center"><strong>CoBrand</strong></p>
-                            <div class="dls-card-lg dls-card-tilt">
-                                <div class="dls-card-tilt-left"></div>
-                                <div class="dls-card-tilt-right"></div>
-                                <div class="dls-card-tilt-container">
-                                  <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/delta_gold_bus_chip_480x304.png" />
-                                </div>
-                            </div>
-                  
-                        </div>
-                        <div className='inset-x-0 top-0'>
-                            <button
-                            onClick={handleClick}
-                            className='mt-2 px-10 py-2 bg-blue-500 text-white rounded-md hover:bg-indigo-500'
-                            >
-                                Apply
-                            </button>
-                            </div>
-    
-                </div>
-                        <div class="col-lg-4 col-md-6 pad">
-                            <p class="dls-gray-04 margin-b text-align-center"><strong>Corporate</strong></p>
-                            <div class="dls-card-lg dls-card-tilt">
-                                <div class="dls-card-tilt-left"></div>
-                                <div class="dls-card-tilt-right"></div>
-                                <div class="dls-card-tilt-container">
-                                  <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/corp_plat_chip_480x304.png" />
-                                </div>
-                            </div>
-                            <div className='inset-x-0 top-0'>
-                            <button
-                            onClick={handleClick}
-                            className='mt-2 px-10 py-2 bg-blue-500 text-white rounded-md hover:bg-indigo-500'
-                            >
-                                Apply
-                            </button>
-                            </div>
-                        </div>
-  
-                        <div class="col-lg-4 col-md-6 pad">
-                            <p class="dls-gray-04 margin-b text-align-center"><strong>Generic</strong></p>
-                            <div class="dls-card-lg dls-card-tilt">
-                                <div class="dls-card-tilt-left"></div>
-                                <div class="dls-card-tilt-right"></div>
-                                <div class="dls-card-tilt-container">
-                                  <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/amex_generic_chip_480x304.png" />
-                                </div>
-                                <div className='inset-x-0 top-0'>
-                            <button
-                            onClick={handleClick}
-                            className='mt-2 px-10 py-2 bg-blue-500 text-white rounded-md hover:bg-indigo-500'
-                            >
-                                Apply
-                            </button>
-                            </div>
-                            </div>
-                            
-                        </div>
-                        <div class="col-lg-4 col-md-6 pad">
-                            <p class="dls-gray-04 margin-b text-align-center"><strong>Prepaid</strong></p>
-                            <div class="dls-card-lg dls-card-tilt">
-                                <div class="dls-card-tilt-left"></div>
-                                <div class="dls-card-tilt-right"></div>
-                                <div class="dls-card-tilt-container">
-                                  <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/serve_free_reloads_perm_480x304.png" />
-                                </div>
-                            </div>
-                            <div className='inset-x-0 top-0'>
-                            <button
-                            onClick={handleClick}
-                            className='mt-2 px-10 py-2 bg-blue-500 text-white rounded-md hover:bg-indigo-500'
-                            >
-                                Apply
-                            </button>
-                            </div>
-                        </div>
-                       
-              
-  
-              
+      
+                 
                 
               </div>
               

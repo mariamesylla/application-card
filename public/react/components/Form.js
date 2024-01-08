@@ -25,6 +25,15 @@ export const Form = () => {
       ...formData,
       [name]: value,
     });
+
+    if (value !=''){
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        [name]:'',
+            })
+      
+      );
+    }
   };
 
   const handleSubmit = (e) => {
@@ -57,7 +66,7 @@ export const Form = () => {
       localStorage.setItem('totalIncome', formData.totalIncome);
 
       // Redirect to the decision page
-      navigate('/approval');
+      navigate('/');
     }
   };
 
