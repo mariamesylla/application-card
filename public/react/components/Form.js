@@ -118,6 +118,8 @@ export const Form = () => {
         </div>
       </div>
 
+        <hr class="mx-auto my-8 h-1 w-100 border-0 bg-gray-100" />
+
       <div>
           <label htmlFor="phone" className="block mb-2 text-sm font-semibold text-gray-600">
             Phone Number
@@ -129,6 +131,8 @@ export const Form = () => {
             value={formData.phone}
             onChange={handleChange}
             placeholder="(___) ___-____"
+            pattern="\d*" 
+            maxlength="12"
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
           />
         </div>
@@ -190,11 +194,14 @@ export const Form = () => {
             name="zipCode"
             value={formData.zipCode}
             onChange={handleChange}
+            maxlength="5"
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
           />
           {errors.zipCode && <p className="text-red-500 text-xs mt-1">{errors.zipCode}</p>}
         </div>
          </div>
+         <hr class="mx-auto my-8 h-1 w-100 border-0 bg-gray-100" />
+
         <div>
           <label htmlFor="ssn" className="block mb-2 text-sm font-semibold text-gray-600">
             Social Security Number
@@ -215,7 +222,7 @@ export const Form = () => {
       <div className="grid grid-cols-2 gap-4 mt-4">
         <div>
           <label htmlFor="dateOfBirth" className="block mb-2 text-sm font-semibold text-gray-600">
-            Date of Birth
+            Date of Birth (Optional)
           </label>
           <input
             type="text"
@@ -251,6 +258,7 @@ export const Form = () => {
             value={formData.totalIncome}
             onChange={handleChange}
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
+            maxlength="6"
           />
           {errors.totalIncome && (
             <p className="text-red-500 text-xs mt-1">{errors.totalIncome}</p>
