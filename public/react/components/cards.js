@@ -9,6 +9,7 @@ export const Card = () => {
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-10"
           aria-hidden="true"
         >
+          
           <div
             className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#3b82f6] to-[#30A5FA] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
             style={{
@@ -17,6 +18,11 @@ export const Card = () => {
             }}
           />
         </div>
+        <div  className="mx-auto max-w-5xl py-30  ">
+
+<div class="relative isolate overflow-hidden bg-white  ">            
+<div class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
+
         <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
       <div class="p-8 sm:p-10 lg:flex-auto">
           <h4 class="flex-none text-sm font-semibold leading-6 text-red-600">What’s included</h4>
@@ -41,7 +47,6 @@ export const Card = () => {
             </div>
       </div>
     </div>
-       
 
     <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
       <div class="p-8 sm:p-10 lg:flex-auto">
@@ -151,7 +156,9 @@ export const Card = () => {
                     0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
          
         </div>
-      </div>
+      
+</div>
+
       <div class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
           <div class="mx-auto max-w-xs px-8">
           <p class="dls-gray-04 margin-b text-align-center"><strong>Small Business</strong></p>
@@ -159,6 +166,8 @@ export const Card = () => {
                 <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/sbs_plum_chip_480x304.png" />
               </div>
             </div>
+            </div>
+      </div>
       </div>
     </div>
       </div>

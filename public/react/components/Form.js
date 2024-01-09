@@ -131,8 +131,7 @@ export const Form = () => {
             value={formData.phone}
             onChange={handleChange}
             placeholder="(___) ___-____"
-            pattern="\d*" 
-            maxlength="12"
+            maxlength="13"
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
           />
         </div>
@@ -213,6 +212,7 @@ export const Form = () => {
             value={formData.ssn}
             onChange={handleChange}
             placeholder="___-__-____"
+            maxlength="11"
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
           />
           {errors.ssn && <p className="text-red-500 text-xs mt-1">{errors.ssn}</p>}
