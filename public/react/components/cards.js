@@ -25,12 +25,12 @@ export const Card = () => {
 
         <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
       <div class="p-8 sm:p-10 lg:flex-auto">
-          <h4 class="flex-none text-sm font-semibold leading-6 text-red-600">What’s included</h4>
+          <h4 class="flex-none text-xl font-semibold leading-6 text-red-600">What’s included</h4>
           <div class="h-px flex-auto bg-gray-100"></div>
 
-        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-white-600 sm:grid-cols-2 sm:gap-6">
+        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-lg leading-6 text-white-600 sm:grid-cols-1 sm:gap-2">
         <p>Amex EveryDay® Preferred Credit Card
-                    Annual Fee $95¤
+                    Annual Fee $95
                     Offer & Benefit Terms
                     ¤ Rates & Fees
                     0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
@@ -50,12 +50,12 @@ export const Card = () => {
 
     <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
       <div class="p-8 sm:p-10 lg:flex-auto">
-          <h4 class="flex-none text-sm font-semibold leading-6 text-red-600">What’s included</h4>
+          <h4 class="flex-none text-xl font-semibold leading-6 text-red-600">What’s included</h4>
           <div class="h-px flex-auto bg-gray-100"></div>
 
-        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
+        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-lg leading-6 text-gray-600 sm:grid-cols-1 sm:gap-2">
         <p>Amex EveryDay® Preferred Credit Card
-                    Annual Fee $95¤
+                    Annual Fee $300
                     Offer & Benefit Terms
                     ¤ Rates & Fees
                     0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
@@ -73,12 +73,12 @@ export const Card = () => {
 
     <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
       <div class="p-8 sm:p-10 lg:flex-auto">
-          <h4 class="flex-none text-sm font-semibold leading-6 text-red-600">What’s included</h4>
+          <h4 class="flex-none text-xl font-semibold leading-6 text-red-600">What’s included</h4>
           <div class="h-px flex-auto bg-gray-100"></div>
 
-        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
+        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-lg leading-6 text-gray-600 sm:grid-cols-1 sm:gap-2">
         <p>Amex EveryDay® Preferred Credit Card
-                    Annual Fee $95¤
+                    Annual Fee $200
                     Offer & Benefit Terms
                     ¤ Rates & Fees
                     0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
@@ -98,12 +98,12 @@ export const Card = () => {
 
     <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
       <div class="p-8 sm:p-10 lg:flex-auto">
-          <h4 class="flex-none text-sm font-semibold leading-6 text-red-600">What’s included</h4>
+          <h4 class="flex-none text-xl font-semibold leading-6 text-red-600">What’s included</h4>
           <div class="h-px flex-auto bg-gray-100"></div>
 
-        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-white-600 sm:grid-cols-2 sm:gap-6">
+        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-white-600 sm:grid-cols-1 sm:gap-2">
         <p>Amex EveryDay® Preferred Credit Card
-                    Annual Fee $95¤
+                    Annual Fee $1000
                     Offer & Benefit Terms
                     ¤ Rates & Fees
                     0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
@@ -123,11 +123,11 @@ export const Card = () => {
 
     <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
       <div class="p-8 sm:p-10 lg:flex-auto">
-          <h4 class="flex-none text-sm font-semibold leading-6 text-red-600">What’s included</h4>
+          <h4 class="flex-none text-xl font-semibold leading-6 text-red-600">What’s included</h4>
           <div class="h-px flex-auto bg-gray-100"></div>
-        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
+        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-lg leading-6 text-gray-600 sm:grid-cols-1 sm:gap-2">
         <p>Amex EveryDay® Preferred Credit Card
-                    Annual Fee $95¤
+                    Annual Fee $300
                     Offer & Benefit Terms
                     ¤ Rates & Fees
                     0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
@@ -145,14 +145,14 @@ export const Card = () => {
 
     <div class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
       <div class="p-8 sm:p-10 lg:flex-auto">
-          <h4 class="flex-none text-sm font-semibold leading-6 text-red-600">What’s included</h4>
+          <h4 class="flex-none text-xl font-semibold leading-6 text-red-600">What’s included</h4>
           <div class="h-px flex-auto bg-gray-100"></div>
 
-        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6">
+        <div role="list" class="mt-8 grid grid-cols-1 gap-4 text-lg leading-6 text-gray-600 sm:grid-cols-1 sm:gap-2">
         <p>Amex EveryDay® Preferred Credit Card
-                    Annual Fee $95¤
+                    Annual Fee $95
                     Offer & Benefit Terms
-                    ¤ Rates & Fees
+                     Rates & Fees
                     0% intro APR on purchases and balance transfers for 12 months from the date of account opening, then a variable APR, 18.24% to 28.24%.¤</p>
          
         </div>

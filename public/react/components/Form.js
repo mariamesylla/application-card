@@ -5,6 +5,7 @@ import { useParams, useNavigate, Link} from "react-router-dom";
 export const Form = () => {
   const navigate = useNavigate();
 
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -39,6 +40,7 @@ export const Form = () => {
     }
   };
 
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = {};
@@ -131,7 +133,7 @@ export const Form = () => {
             value={formData.phone}
             onChange={handleChange}
             placeholder="(___) ___-____"
-            maxlength="13"
+            maxlength="14"
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
           />
         </div>

@@ -23,6 +23,7 @@ export const Home = () => {
             }}
           />
         </div>
+        <div className='flex flex-wrap'></div>
         <div className="text-center">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Apply for a credit card 
@@ -31,12 +32,13 @@ export const Home = () => {
         <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-56">
           
           <div className="text-center">
-            
+          <div className='flex flex-wrap justify-center'>
+
             <div className="mt-0 flex items-center justify-center gap-x-6">
-      
+
                <div>
-                      <div class="col-lg-4 col-md-6 pad">
-                          <p class="dls-gray-04 margin-b text-align-center"><strong>CoBrand</strong></p>
+                      <div class="col-md-4 col-md-6 pad">
+                          <p class=" margin-b text-align-center"><strong>CoBrand</strong></p>
                               <div class="hover:animate-bounce " >
                               <a href='/cards'>
                                 <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/delta_gold_bus_chip_480x304.png" />
@@ -53,8 +55,8 @@ export const Home = () => {
                           </div>
   
               </div>
-                      <div class="col-lg-4 col-md-6 pad">
-                          <p class="dls-gray-04 margin-b text-align-center"><strong>Corporate</strong></p>
+                      <div >
+                          <p class=" margin-b text-align-center"><strong>Corporate</strong></p>
                               <div class="hover:animate-bounce" >
                               <a href='/cards'>
                                 <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/corp_plat_chip_480x304.png" />
@@ -69,9 +71,9 @@ export const Home = () => {
                           </button>
                           </div>
                       </div>
-
-                      <div class="col-lg-4 col-md-6 pad">
-                          <p class="dls-gray-04 margin-b text-align-center"><strong>Generic</strong></p>
+                    <div></div>
+                      <div >
+                          <p class=" margin-b text-align-center"><strong>Generic</strong></p>
                               <div class="hover:animate-bounce">
                               <a href='/cards'>
                                 <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/amex_generic_chip_480x304.png" />
@@ -88,8 +90,8 @@ export const Home = () => {
                           </div>
                           
                       </div>
-                      <div class="col-lg-4 col-md-6 pad">
-                          <p class="dls-gray-04 margin-b text-align-center"><strong>Prepaid</strong></p>
+                      <div >
+                          <p class=" margin-b text-align-center"><strong>Prepaid</strong></p>
                               <div class="hover:animate-bounce">
                                 <a href='/cards'>
                                 <img src="https://www.aexp-static.com/cdaas/one/statics/@americanexpress/static-assets/2.28.0/package/dist/img/cards/serve_free_reloads_perm_480x304.png" />
@@ -108,6 +110,7 @@ export const Home = () => {
             
           </div>
         </div>
+        </div>
         <div
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
           aria-hidden="true"
@@ -124,3 +127,4 @@ export const Home = () => {
   </div>
   )
 } 
+
