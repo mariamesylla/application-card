@@ -1,0 +1,22 @@
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card {
+    border: 1px solid blue;
+    flex: 1 0 250px
+
+}
+
+
+
+
+/*<div className='container'>
+<div className='card' > card</div>
+<div className='card'  >card</div>
+<div className='card'>card</div>
+<div className='card' >card</div>
+
+</div>*/

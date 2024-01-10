@@ -23,7 +23,6 @@ export const Home = () => {
             }}
           />
         </div>
-        <div className='flex flex-wrap'></div>
         <div className="text-center">
             <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Apply for a credit card 
@@ -71,7 +70,6 @@ export const Home = () => {
                           </button>
                           </div>
                       </div>
-                    <div></div>
                       <div >
                           <p class=" margin-b text-align-center"><strong>Generic</strong></p>
                               <div class="hover:animate-bounce">
