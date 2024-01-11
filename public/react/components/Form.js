@@ -29,6 +29,8 @@ export const Form = () => {
       ...formData,
       [name]: value,
     });
+
+
     //To clear validation error
     if (value !=''){
       setErrors((prevErrors) => ({
@@ -46,17 +48,16 @@ export const Form = () => {
 
     // Basic validation - checking for empty fields
 
-
     if (formData.firstName === '') { 
       validationErrors.firstName = 'First Name required'; } 
     
-      if (formData.lastName ===''){
+    if (formData.lastName ===''){
         validationErrors.lastName = 'Last Name  required';
       }
     if (formData.ssn === '') { 
       validationErrors.ssn = 'Social Security Number  required'; } 
 
-      if (formData.ssn === '') { 
+    if (formData.ssn === '') { 
         validationErrors.street = 'Street address  required'; } 
   
     if (formData.state === '') { 
@@ -132,7 +133,7 @@ export const Form = () => {
             value={formData.phone}
             onChange={handleChange}
             placeholder="(___) ___-____"
-            maxlength="14"
+            maxlength="13"
             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
           />
         </div>
@@ -281,7 +282,6 @@ export const Form = () => {
           <option value="Unemployed">Unemployed</option>
           <option value="Military">Military</option>
         </select>
-      
       </div>
       <div className="mt-6">
         <button

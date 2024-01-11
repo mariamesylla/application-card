@@ -67,6 +67,12 @@ export const Approval = () => {
 
              
           </div>
+          <button
+                          onClick={handleClick}
+                          className='mt-2 px-10 py-2 bg-blue-500 text-white rounded-md hover:bg-indigo-500'
+                          >
+                              REAPPLY
+                          </button>
         </div>
         </div>
         </div>
