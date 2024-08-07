@@ -8,7 +8,7 @@ export const Home = () => {
     navigate("/Form");
   };
   return (
-    <div className="bg-sky-300 md:max-h-[30%]">
+    <div className="bg-white-300 md:max-h-[30%]">
       
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div
